@@ -121,7 +121,6 @@ class LoginView(View):
                 login(request, user)
                 if not form.cleaned_data['remember']:
                     request.session.set_expiry(0)
-
                 return AjaxObj(msg='Успешный вход в систему', data=request.session['cloud']).get_response()
 
             return AjaxObj(400, 'ошибка', {'errors': {'username': ['Неправильное имя пользователя или пароль']}}).get_response()
@@ -293,8 +292,10 @@ class DuplicatedCheck(LoginRequiredMixin, View):
 
 class FileUploadView(LoginRequiredMixin, View):
     """Загрузить файл"""
+    print('FileUploadView')
 
     def post(self, request):
+        print('FileUploadView def post')
         file = request.FILES.get('file')
         if file is None:
             return AjaxObj().get_response()

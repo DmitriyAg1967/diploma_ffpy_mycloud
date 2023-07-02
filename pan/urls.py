@@ -60,3 +60,4 @@ router.register('bin', views.BinViewSet, 'api-bin')
 router.register('folder', views.FolderViewSet, 'api-folder')
 router.register('file', views.FileViewSet, 'api-file')
 router.register('notice', views.NoticeViewSet, 'api-notice')
+
