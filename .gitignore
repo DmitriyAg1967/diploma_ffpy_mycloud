@@ -160,5 +160,5 @@ cython_debug/
 .idea/
 
 # media
-media/pan
+
 media/uploads!/postgresql.conf
