@@ -292,10 +292,8 @@ class DuplicatedCheck(LoginRequiredMixin, View):
 
 class FileUploadView(LoginRequiredMixin, View):
     """Загрузить файл"""
-    print('FileUploadView')
 
     def post(self, request):
-        print('FileUploadView def post')
         file = request.FILES.get('file')
         if file is None:
             return AjaxObj().get_response()
