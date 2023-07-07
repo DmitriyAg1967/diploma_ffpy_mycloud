@@ -26,22 +26,29 @@ DATABASES = {
         'NAME': 'cloud',
         'HOST': '127.0.0.1',
         'PORT': '5432',
-        'USER': 'postgres',
+        'USER': '*******',
         'PASSWORD': '********',
     }
 } }
 }
 ```
-3. Перенос базы данных
+
+3. Настройка файла: diploma_ffpy_mycloud/pan/static/pan/js/config.js
+```
+Для const domain = 'http://0.0.0.0:8000' замените 0.0.0.0:8000
+на 127.0.0.1:8000
+
+```
+4. Перенос базы данных
 ```
 python manage.py migrate
 
 ```
-4Создайте суперпользователя
+5. Создайте суперпользователя
 ```
 python manage.py createsuperuser
 ```
-5Запустите локальный сервер
+6. Запустите локальный сервер
 ```
 python manage.py runserver
 ```
