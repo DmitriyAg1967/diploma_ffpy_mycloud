@@ -35,7 +35,7 @@ DATABASES = {
 
 3. Настройка файла: diploma_ffpy_mycloud/pan/static/pan/js/config.js
 ```
-Для const domain = 'http://0.0.0.0:8000' замените 0.0.0.0:8000
+Для const domain = 'http://0.0.0.0:8000' замените 194.67.118.206:8000
 на 127.0.0.1:8000
 
 ```
