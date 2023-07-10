@@ -164,7 +164,7 @@
         } else if (timedelta < 86400) {
             return Math.floor(timedelta / 3600) + 'Истекает через несколько часов'
         } else {
-            return Math.floor(timedelta / 86400) + '天' + Math.floor((timedelta % 86400) / 3600) + 'Истекает через несколько часов'
+            return Math.floor(timedelta / 86400) + 'день' + Math.floor((timedelta % 86400) / 3600) + 'Истекает через несколько часов'
         }
     }
 

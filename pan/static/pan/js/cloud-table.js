@@ -211,7 +211,7 @@ $(document).ready(function () {
                         <li><a class="dropdown-item custom-link icon-link" data-custom-method="fileDownload" 
                                 data-custom-uuid="${row.file_uuid}" href="javascript:void(0)"><i class="fas fa-file-download me-2"></i>загрузить</a></li>
                         <li><a class="dropdown-item custom-link icon-link" data-custom-method="fileMove" 
-                                data-custom-uuid="${row.file_uuid}" href="javascript:void(0)"><i class="fas fa-expand-arrows-alt me-2"></i>двигать</a></li>
+                                data-custom-uuid="${row.file_uuid}" href="javascript:void(0)"><i class="fas fa-expand-arrows-alt me-2"></i>переместить</a></li>
                         <li><a class="dropdown-item custom-link icon-link" data-custom-method="fileTrash" 
                                 data-custom-uuid="${row.file_uuid}" href="javascript:void(0)"><i class="fas fa-trash me-2"></i>стереть</a></li>
                     </ul>
