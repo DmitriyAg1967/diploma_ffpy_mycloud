@@ -160,11 +160,11 @@
         if (timedelta < 0) {
             return 'Истекло'
         } else if (timedelta < 3600) {
-            return Math.floor(timedelta / 60) + 'Истекает через несколько минут'
+            return Math.floor(timedelta / 60) + ' Истекает через несколько минут'
         } else if (timedelta < 86400) {
-            return Math.floor(timedelta / 3600) + 'Истекает через несколько часов'
+            return Math.floor(timedelta / 3600) + ' Истекает через несколько часов'
         } else {
-            return Math.floor(timedelta / 86400) + 'день' + Math.floor((timedelta % 86400) / 3600) + 'Истекает через несколько часов'
+            return Math.floor(timedelta / 86400) + ' дней ' + Math.floor((timedelta % 86400) / 3600) + ' часов Срок истекает через несколько часов'
         }
     }
 
