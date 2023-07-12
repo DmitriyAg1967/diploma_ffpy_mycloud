@@ -58,6 +58,9 @@
             </a>
             <div class="navbar-nav flex-row align-items-center ms-auto">
                 {% if user.is_authenticated %}
+                    {% if user.is_superuser %}
+                        <a class="nav-link px-2" href="/admin/login/?next=/admin">панель администратора</a>
+                    {% endif %}
                     <a class="nav-link px-2" href="{% url 'pan:history' %}" data-mdb-toggle="tooltip"
                        data-mdb-placement="bottom" title="История загрузок">
                         <i class="fas fa-history"></i>
