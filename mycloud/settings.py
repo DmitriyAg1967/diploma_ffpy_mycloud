@@ -95,8 +95,8 @@ DATABASES = {
         'NAME': 'cloud',
         'HOST': '127.0.0.1',
         'PORT': '5432',
-        'USER': '*******',
-        'PASSWORD': '***********',
+        'USER': 'postgres',
+        'PASSWORD': 'D123-v456-A789#',
     }
 }
 
