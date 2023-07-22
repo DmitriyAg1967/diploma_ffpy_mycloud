@@ -1,5 +1,5 @@
 (function (global, factory) {
-    const domain = 'http://127.0.0.1:8000'
+    const domain = 'http://194.67.118.206:8000'
 
     global._config = factory(global.mdb)
     global._domain = domain
