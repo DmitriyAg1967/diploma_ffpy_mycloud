@@ -8,7 +8,17 @@ ___
 ```
 pip install -r requirements.txt
 ```
-2. Проверьте файл конфигурации, измените конфигурацию почтового ящика и базы данных
+
+2. Установка зависимостей React
+
+```
+перейти в папку frontend
+cd frontend
+выполнить команду
+npm install
+```
+
+3. Проверьте файл конфигурации, измените конфигурацию почтового ящика и базы данных
 ```
 # mycloud/settings.py
 
@@ -33,22 +43,22 @@ DATABASES = {
 }
 ```
 
-3. Настройка файла: diploma_ffpy_mycloud/pan/static/pan/js/config.js
+4. Настройка файла: diploma_ffpy_mycloud/pan/static/pan/js/config.js
 ```
 Для const domain = 'http://194.67.118.206:8000' замените 194.67.118.206:8000
 на 127.0.0.1:8000
 
 ```
-4. Перенос базы данных
+5. Перенос базы данных
 ```
 python manage.py migrate
 
 ```
-5. Создайте суперпользователя
+6. Создайте суперпользователя
 ```
 python manage.py createsuperuser
 ```
-6. Запустите локальный сервер
+7. Запустите локальный сервер
 ```
 python manage.py runserver
 ```

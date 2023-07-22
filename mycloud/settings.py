@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 from secrets import token_hex
 
@@ -49,6 +50,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'debug_toolbar',
+    'frontend',
 ]
 
 MIDDLEWARE = [
@@ -68,7 +70,7 @@ ROOT_URLCONF = 'mycloud.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': [os.path.join(BASE_DIR, 'frontend', 'public')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -93,8 +95,8 @@ DATABASES = {
         'NAME': 'cloud',
         'HOST': '127.0.0.1',
         'PORT': '5432',
-        'USER': '******',
-        'PASSWORD': '*********',
+        'USER': '*******',
+        'PASSWORD': '***********',
     }
 }
 
@@ -135,7 +137,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'static'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'frontend', 'public', 'static')]
+# STATIC_ROOT = BASE_DIR / 'static'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'

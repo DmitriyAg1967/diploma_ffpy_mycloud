@@ -61,7 +61,7 @@
 <script>
     $(document).ready(function () {
         {% if expired %}
-            let dom = `<p>Срок действия файла истек</p><a class="btn btn-light btn-lg shadow-1" href="/">Вернуться на главную страницу</a>`
+            let dom = `<p>Срок действия файла истек</p><a class="btn btn-light btn-lg shadow-1" href="/frontend/public">Вернуться на главную страницу</a>`
             $('#wrapper').html(custom.elEmpty(dom))
         {% else %}
             let toast = new custom.Toast($('#toast'))

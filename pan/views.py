@@ -25,6 +25,10 @@ from .paginations import NoticeResultSetPagination
 from .serializers import FileSerializer, FileShareSerializer, FolderSerializer, NoticeSerializer
 from .utils import AjaxObj, get_key_signature, get_dir_size, make_archive_bytes, file_size_format
 
+def front(request):
+    context = { }
+    return render(request, "index.html", context)
+
 class IndexView(TemplateView):
     """Первая страница"""
     template_name = 'pan/index.html'
