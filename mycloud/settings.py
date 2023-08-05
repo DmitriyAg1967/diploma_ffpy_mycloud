@@ -50,7 +50,6 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'debug_toolbar',
-    'frontend',
 ]
 
 MIDDLEWARE = [
@@ -70,7 +69,7 @@ ROOT_URLCONF = 'mycloud.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'frontend', 'public')],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -95,8 +94,8 @@ DATABASES = {
         'NAME': 'cloud',
         'HOST': '127.0.0.1',
         'PORT': '5432',
-        'USER': '******',
-        'PASSWORD': '***********',
+        'USER': 'postgres',
+        'PASSWORD': 'D123-v456-A789#',
     }
 }
 
@@ -137,8 +136,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'frontend', 'public', 'static')]
-# STATIC_ROOT = BASE_DIR / 'static'
+STATIC_ROOT = BASE_DIR / 'static'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'

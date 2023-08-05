@@ -18,12 +18,10 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.staticfiles.views import serve
-from pan.views import front
 
 from pan.urls import router
 
 urlpatterns = [
-    path("", front, name="front"),
     path('', include('pan.urls')),
     path('api/', include(router.urls)),
     path('admin/', admin.site.urls),
